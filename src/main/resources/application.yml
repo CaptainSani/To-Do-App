@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/todo-app-db
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL}
+    password: ${MAILPASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
